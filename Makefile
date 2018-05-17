@@ -1,4 +1,4 @@
-IMG_NAME := bufferapp/24x-to-datadog
+IMG_NAME := bufferapp/24x7-to-datadog
 
 .PHONY: all
 all:
@@ -7,6 +7,9 @@ all:
 
 run:
 	docker run -v $(PWD):/app -it --rm --env-file .env $(IMG_NAME)
+
+build:
+	docker build -t $(IMG_NAME) -f Dockerfile .
 
 .PHONY: push
 push:

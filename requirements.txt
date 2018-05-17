@@ -1,2 +1,2 @@
-datadog==0.15.0
+datadog==0.20.0
 requests==2.13.0
